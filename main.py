@@ -24,9 +24,24 @@ def ask_question_with_no_default():
     print(f'{yn=}')
 
 
+def ask_for_whole_number():
+    """Ask for a whole number with no restrictions"""
+    n = IU.get_whole_number('How many people are in your party? ')
+    print(f'{n=}')
+
+
+def ask_for_whole_number_in_range():
+    """Ask for a whole number with a range restriction"""
+    n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
+    print(f'{n=}')
+
+
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
 
     ask_question_with_default_yes()
     ask_question_with_default_no()
     ask_question_with_no_default()
+
+    ask_for_whole_number()
+    ask_for_whole_number_in_range()
