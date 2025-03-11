@@ -1,8 +1,10 @@
 # Python Input Examples (Plain)
-Example of input() encapsulated in a library (InputUtilities class)
+Example of input() encapsulated in a library (InputUtilities class).
+
+All the methods are static, so you do not need to create an instance of the class to use its methods.
 
 ## Example usage
-To use the input utilities (InputUtils class):
+To use the input utilities (InputUtils class) and its static methods:
 ### Yes/No questions examples
 <pre> 
 from input_utilities import InputUtils as IU
