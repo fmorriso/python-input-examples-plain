@@ -63,8 +63,7 @@ class InputUtils:
 
     @staticmethod
     def get_decimal_number_in_range(prompt: str, minimum: Number_with_decimal_point = 0,
-                                    maximum: Number_with_decimal_point = 10) -> (
-            decimal):
+                                    maximum: Number_with_decimal_point = 10) -> decimal:
         MSG: str = f'{prompt} (between {minimum} and {maximum})'
         while True:
             try:

@@ -9,9 +9,9 @@ To use the input utilities (InputUtils class) and its static methods:
 <pre> 
 from input_utilities import InputUtils as IU
 
-yn = IU.get_yesno_response('Do you want ketchup?')
-yn = IU.get_yesno_response('Play again?', enter = True)
-yn = IU.get_yesno_response('Do you want to quit the program?', enter = False)
+yn: bool = IU.get_yesno_response('Do you want ketchup?')
+yn: bool = IU.get_yesno_response('Play again?', enter = True)
+yn: bool = IU.get_yesno_response('Do you want to quit the program?', enter = False)
 </pre>
 
 ### Whole number input examples

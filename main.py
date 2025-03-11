@@ -29,13 +29,13 @@ def ask_question_with_no_default():
 
 def ask_for_whole_number():
     """Ask for a whole number with no restrictions"""
-    n = IU.get_whole_number('How many people are in your party? ')
+    n: int = IU.get_whole_number('How many people are in your party? ')
     print(f'{n=}')
 
 
 def ask_for_whole_number_in_range():
     """Ask for a whole number with a range restriction"""
-    n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
+    n: int = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
     print(f'{n=}')
 
 
