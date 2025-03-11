@@ -12,7 +12,7 @@ yn = IU.get_yesno_response('Play again', enter = True)
 yn = IU.get_yesno_response('Do you want to quit the program', enter = False)
 </pre>
 
-### Whole Number input examples
+### Whole number input examples
 
 <pre> 
 from input_utilities import InputUtils as IU
@@ -21,6 +21,23 @@ n = IU.get_whole_number('How many people are in your party? ')
 n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
 </pre>
 
+### Floating point number input examples
+
+<pre> 
+from input_utilities import InputUtils as IU
+
+x = IU.get_floating_point_number('What was the weight in pounds? ')
+x = IU.get_floating_point_number_in_range('How many gallons do you wish to purchase? ', 0.5, 22.5)
+</pre>
+
+### Decimal number input examples
+
+<pre> 
+from input_utilities import InputUtils as IU
+
+d = IU.get_decimal_number('How much money do you wish to withdraw? ')
+d = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
+</pre>
 
 ## Tools Used
 
@@ -37,3 +54,5 @@ n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
 | 2025-03-11 | Initial creation |
 
 ## References
+
+* [Python decimal type](https://docs.python.org/3/library/decimal.html)

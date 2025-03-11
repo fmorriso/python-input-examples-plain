@@ -1,5 +1,6 @@
 import decimal
 from decimal import Decimal
+from typing import Union
 
 
 class InputUtils:
@@ -36,7 +37,7 @@ class InputUtils:
 
 
     @staticmethod
-    def get_floating_point_number_in_range(prompt: str, minimum: int = 0, maximum: int = 10) -> float:
+    def get_floating_point_number_in_range(prompt: str, minimum: float = 0, maximum: float = 10) -> float:
         MSG: str = f'{prompt} (between {minimum} and {maximum}) '
         while True:
             try:
@@ -57,8 +58,13 @@ class InputUtils:
                 print('Please enter a decimal number')
 
 
+    Number_with_decimal_point = Union[float, Decimal] # input parameter type with some flexibility
+
+
     @staticmethod
-    def get_decimal_number_in_range(prompt: str, minimum: int = 0, maximum: int = 10) -> decimal:
+    def get_decimal_number_in_range(prompt: str, minimum: Number_with_decimal_point = 0,
+                                    maximum: Number_with_decimal_point = 10) -> (
+            decimal):
         MSG: str = f'{prompt} (between {minimum} and {maximum})'
         while True:
             try:
@@ -69,8 +75,9 @@ class InputUtils:
             except (TypeError, ValueError):
                 print('Please enter a decimal number')
 
+
     @staticmethod
-    def get_yesno_response(prompt: str, enter=None) -> bool:
+    def get_yesno_response(prompt: str, enter = None) -> bool:
         """get a yes/no (True/False) response to a question
         :param prompt: The yes/no question to ask the user
         :param enter: (optional) treat enter key as True or False.
@@ -92,7 +99,7 @@ class InputUtils:
         elif not enter:
             enter_key_meaning = 'no'
 
-        MSG: str = f'{prompt} (yes/y/no/n'#
+        MSG: str = f'{prompt} (yes/y/no/n'  #
         if enter_key_meaning == 'nothing':
             MSG += ') ?'
         elif enter_key_meaning == 'yes':
