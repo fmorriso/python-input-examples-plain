@@ -27,10 +27,6 @@ def ask_question_with_no_default():
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
 
-
-
-
-
     ask_question_with_default_yes()
     ask_question_with_default_no()
     ask_question_with_no_default()
