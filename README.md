@@ -1,6 +1,15 @@
 # Python Input Examples (Plain)
 Example of input() encapsulated in a library (InputUtilities class)
 
+## Example usage
+To use the input utilities (InputUtils class):
+<pre> 
+from input_utilities import InputUtils as IU
+
+yn = IU.get_yesno_response('Do you want ketchup')
+yn = IU.get_yesno_response('Play again', enter = True)
+yn = IU.get_yesno_response('Do you want to quit the program', enter = False)
+</pre>
 ## Tools Used
 
 | Tool     |  Version |

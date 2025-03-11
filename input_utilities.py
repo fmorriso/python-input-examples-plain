@@ -77,6 +77,12 @@ class InputUtils:
         if True, hitting the Enter key is the same as Yes.
         if False, hitting the Enter key is the same as No.
         if not set, the user must explicitly enter yes/no/y/n
+
+        Example usage:
+            ``from input_utilities import InputUtils as IU``
+            ``yn = IU.get_yesno_response('Do you want ketchup')``
+            ``yn = IU.get_yesno_response('Play again', enter = True)``
+            ``yn = IU.get_yesno_response('Do you want to quit the program', enter = False)``
         """
         enter_key_meaning = ''
         if enter is None:
