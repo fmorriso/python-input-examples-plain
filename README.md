@@ -35,10 +35,12 @@ x = IU.get_floating_point_number_in_range('How many gallons do you wish to purch
 ### Decimal number input examples
 
 <pre> 
+import decimal
+from decimal import Decimal
 from input_utilities import InputUtils as IU
 
-d = IU.get_decimal_number('How much money do you wish to withdraw? ')
-d = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
+d: decimal = IU.get_decimal_number('How much money do you wish to withdraw? ')
+d: decimal = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
 </pre>
 
 ## Tools Used

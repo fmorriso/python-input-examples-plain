@@ -1,5 +1,8 @@
+import decimal
 import sys
+
 from input_utilities import InputUtils as IU
+
 
 def get_python_version() -> str:
     """ the version of python running this program"""
@@ -41,6 +44,7 @@ def ask_for_floating_point_number():
     x = IU.get_floating_point_number('What was the weight in pounds? ')
     print(f'{x=}')
 
+
 def ask_for_floating_point_number_in_range():
     """Ask for a floating point number with a range restriction"""
     x = IU.get_floating_point_number_in_range('How many gallons do you wish to purchase? ', 0.5, 22.5)
@@ -49,14 +53,15 @@ def ask_for_floating_point_number_in_range():
 
 def ask_for_decimal_number():
     """Ask for a decimal number with no restrictions"""
-    d = IU.get_decimal_number('How much money do you wish to withdraw? ')
+    d: decimal = IU.get_decimal_number('How much money do you wish to withdraw? ')
     print(f'{d=:,.2f}')
 
 
 def ask_for_decimal_number_in_range():
     """Ask for a decimal number with a range restriction"""
-    d = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
+    d: decimal = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
     print(f'{d=:,.2f}')
+
 
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
