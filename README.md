@@ -19,8 +19,8 @@ yn = IU.get_yesno_response('Do you want to quit the program?', enter = False)
 <pre> 
 from input_utilities import InputUtils as IU
 
-n = IU.get_whole_number('How many people are in your party? ')
-n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
+n: int = IU.get_whole_number('How many people are in your party? ')
+n: int = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
 </pre>
 
 ### Floating point number input examples
@@ -28,8 +28,8 @@ n = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
 <pre> 
 from input_utilities import InputUtils as IU
 
-x = IU.get_floating_point_number('What was the weight in pounds? ')
-x = IU.get_floating_point_number_in_range('How many gallons do you wish to purchase? ', 0.5, 22.5)
+x: float = IU.get_floating_point_number('What was the weight in pounds? ')
+x: float = IU.get_floating_point_number_in_range('How many gallons do you wish to purchase? ', 0.5, 22.5)
 </pre>
 
 ### Decimal number input examples

@@ -58,7 +58,7 @@ class InputUtils:
                 print('Please enter a decimal number')
 
 
-    Number_with_decimal_point = Union[float, Decimal] # input parameter type with some flexibility
+    Number_with_decimal_point = Union[float, Decimal]  # input parameter type with some flexibility
 
 
     @staticmethod
@@ -99,7 +99,7 @@ class InputUtils:
         elif not enter:
             enter_key_meaning = 'no'
 
-        MSG: str = f'{prompt.replace('?','', 1)} (yes/y/no/n'  #
+        MSG: str = f'{prompt.replace('?', '', 1)} (yes/y/no/n'  #
         if enter_key_meaning == 'nothing':
             MSG += ') ?'
         elif enter_key_meaning == 'yes':
