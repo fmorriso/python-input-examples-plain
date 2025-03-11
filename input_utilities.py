@@ -90,9 +90,9 @@ class InputUtils:
         if enter_key_meaning == 'nothing':
             MSG += ') ?'
         elif enter_key_meaning == 'yes':
-            MSG += ' , Enter key means Yes) ?'
+            MSG += ', Enter key means Yes) ?'
         elif enter_key_meaning == 'no':
-            MSG += ' , Enter key means No) ?'
+            MSG += ', Enter key means No) ?'
 
         while True:
             try:

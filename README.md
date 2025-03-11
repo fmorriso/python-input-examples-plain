@@ -1,4 +1,4 @@
-# Input Examples (Plain)
+# Python Input Examples (Plain)
 Example of input() encapsulated in a library (InputUtilities class)
 
 ## Tools Used
