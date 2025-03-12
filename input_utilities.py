@@ -7,6 +7,11 @@ class InputUtils:
 
     @staticmethod
     def get_whole_number(prompt: str) -> int:
+        """
+        Get a whole number (unrestricted range).
+        :param prompt:  A string containing the prompt text to show the user.
+        :return: a whole value
+        """
         while True:
             try:
                 return int(input(prompt))
@@ -16,6 +21,13 @@ class InputUtils:
 
     @staticmethod
     def get_whole_number_in_range(prompt: str, minimum: int = 0, maximum: int = 10) -> int:
+        """
+        Get a whole number with a restricted range of values.
+        :param prompt:  A string containing the prompt text to show the user.
+        :param minimum: The minimum value that can be entered.
+        :param maximum: The maximum value that can be entered.
+        :return: a whole value
+        """
         MSG: str = f'{prompt} (between {minimum} and {maximum}) '
         while True:
             try:
@@ -29,6 +41,11 @@ class InputUtils:
 
     @staticmethod
     def get_floating_point_number(prompt: str) -> float:
+        """
+        Get a floating point number (unrestricted range).
+        :param prompt:  A string containing the prompt text to show the user.
+        :return: a floating point value
+        """
         while True:
             try:
                 return float(input(prompt))
@@ -38,6 +55,13 @@ class InputUtils:
 
     @staticmethod
     def get_floating_point_number_in_range(prompt: str, minimum: float = 0, maximum: float = 10) -> float:
+        """
+        Get a floating point number with a restricted range of values.
+        :param prompt:  A string containing the prompt text to show the user.
+        :param minimum: The minimum value that can be entered.
+        :param maximum: The maximum value that can be entered.
+        :return: a floating point value
+        """
         MSG: str = f'{prompt} (between {minimum} and {maximum}) '
         while True:
             try:
@@ -51,6 +75,11 @@ class InputUtils:
 
     @staticmethod
     def get_decimal_number(prompt: str) -> decimal:
+        """
+        Get a decimal number (unrestricted range).
+        :param prompt:  A string containing the prompt text to show the user.
+        :return: a decimal value
+        """
         while True:
             try:
                 return Decimal(input(prompt))
@@ -64,6 +93,13 @@ class InputUtils:
     @staticmethod
     def get_decimal_number_in_range(prompt: str, minimum: Number_with_decimal_point = 0,
                                     maximum: Number_with_decimal_point = 10) -> decimal:
+        """
+        Get a decimal number with a restricted range of values.
+        :param prompt:  A string containing the prompt text to show the user.
+        :param minimum: The minimum value that can be entered.
+        :param maximum: The maximum value that can be entered.
+        :return: a decimal value
+        """
         MSG: str = f'{prompt} (between {minimum} and {maximum})'
         while True:
             try:
